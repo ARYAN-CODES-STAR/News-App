@@ -8,6 +8,7 @@ export default class App extends Component {
     return (
       <div>App</div>
     )
+    
   }
 }
-default export App
+// default export App
