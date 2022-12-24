@@ -1,14 +1,19 @@
-
 import './App.css';
+import Navbar from './components/Navbar'
+import News from './components/News';
+import Newsitem from './components/Newsitem';
 
-import React, { Component } from 'react'
+function App() {
+  return (
+    <>
+      {/* <TextForm/> */}
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>App</div>
-    )
-    
-  }
+      <Navbar/>
+      <News/>
+      <Newsitem/>
+    </>
+ 
+  );
 }
-// default export App
+
+export default App;
