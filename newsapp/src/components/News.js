@@ -72,12 +72,16 @@ export class News extends Component {
     return (
       <div className="container my-4">
         <h2>Taaza Khabar</h2>
-        {this.state.articles.entriesmap((element)=>{
-          return <div className="col-md-4">
-          <Newsitem key={element.url} title="myTitle" description="mydesc" imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnSGmEJerJ5Wsi0y01slbS2HwNmxue82P2Ht0IZ_MFw&s" newsUrl="TODO" />
-        
+      <div className="row">
+        <div className="col-md-4">
+          <Newsitem title="myTitle" description="myone" imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnSGmEJerJ5Wsi0y01slbS2HwNmxue82P2Ht0IZ_MFw&s" newsUrl="TODO" />
         </div>
-        )}}
+        <div className="col-md-4">
+          <Newsitem title="myTitle" description="myone"/>
+        </div>
+        <div className="col-md-4">
+          <Newsitem title="myTitle" description="myone"/>
+        </div>
       </div>
    </div>
     )
