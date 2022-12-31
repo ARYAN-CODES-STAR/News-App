@@ -70,23 +70,21 @@ export class News extends Component {
   }
   render() {
     return (
-      <div className="container my-4">
+      <div className="container my-3">
         <h2>Taaza Khabar</h2>
-        {this.state.articles.map((element)=>{console.log(element)})}
-      <div className="row">
-        <div className="col-md-4">
-          <Newsitem title="myTitle" description="myone" imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnSGmEJerJ5Wsi0y01slbS2HwNmxue82P2Ht0IZ_MFw&s" newsUrl="TODO" />
+        <div className="row">
+        {this.state.articles.map((element)=>{ 
+      return
+        <div className="col-md-4" key={element.url}>
+          <Newsitem key={element.url} title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.newsUrl} />
         </div>
-        <div className="col-md-4">
-          <Newsitem title="myTitle" description="myone" imageUrl/>
+      })}
+          </div>
+      
         </div>
-        <div className="col-md-4">
-          <Newsitem title="myTitle" description="myone"/>
-        </div>
-      </div>
-   </div>
-    )
-  }
+    
+  )
+}
 }
 
 export default News;
